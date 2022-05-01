@@ -1,0 +1,20 @@
+.wellcome_text {
+	width: 20%;
+	display: flex;
+	gap: 10px;
+
+	font-size: 5em;
+	color: var(--green-lizard);
+	cursor: default;
+}
+.wellcome_text span {
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+.secret {
+	cursor: pointer;
+}
+.secret:hover {
+	transform: translateY(-3%);
+	filter: brightness(1.3);
+}

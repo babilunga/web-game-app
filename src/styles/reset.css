@@ -1,0 +1,145 @@
+@font-face {
+	font-family: 'Radio Canada';
+	src: url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;600&display=swap');
+}
+/* css normalize */
+html {
+	box-sizing: border-box;
+	--black-chocolate: #140f00;
+	--blue: #1421e0;
+	--slimy-green: #527512;
+	--green-lizard: #b0d621;
+	--lavander-blue: #c2c4f7;
+	/* --black-chocolate: #140f00;
+	--blue: #0f2bfa;
+	--slimy-green: #458d01;
+	--green-lizard: #a2f104;
+	--lavander-blue: #c2c6fe; */
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	/* font-family: 'Radio Canada', sans-serif; */
+	font-family: Consolas, 'Courier New', monospace;
+	font-weight: normal;
+}
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--blue);
+	font-size: 1.6rem;
+}
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+ol,
+ul {
+	list-style: none;
+}
+/* css reset end */

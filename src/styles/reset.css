@@ -5,16 +5,6 @@
 /* css normalize */
 html {
 	box-sizing: border-box;
-	--black-chocolate: #140f00;
-	--blue: #1421e0;
-	--slimy-green: #527512;
-	--green-lizard: #b0d621;
-	--lavander-blue: #c2c4f7;
-	/* --black-chocolate: #140f00;
-	--blue: #0f2bfa;
-	--slimy-green: #458d01;
-	--green-lizard: #a2f104;
-	--lavander-blue: #c2c6fe; */
 }
 *,
 *:before,
@@ -28,7 +18,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--blue);
+	background-color: white;
 	font-size: 1.6rem;
 }
 code {

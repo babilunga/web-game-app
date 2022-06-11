@@ -1,0 +1,15 @@
+.canvas-wrap {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80%;
+	margin: 0 auto;
+}
+canvas {
+	background-color: #fff;
+	outline: 1px solid black;
+	cursor: crosshair;
+}

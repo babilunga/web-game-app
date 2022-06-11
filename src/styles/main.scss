@@ -1,0 +1,24 @@
+.app {
+	height: 100vh;
+	padding: 0 3rem;
+	--border-main: 1px solid black;
+}
+.table_wrap {
+	border-top: var(--border-main);
+	border-left: var(--border-main);
+}
+.table_wrap > div {
+	border-bottom: var(--border-main);
+	border-right: var(--border-main);
+}
+*::-moz-selection {
+	color: rgb(255, 255, 255);
+	background: rgb(0, 0, 0);
+}
+*::selection {
+	color: rgb(255, 255, 255);
+	background: rgb(0, 0, 0);
+}
+
+@import '../Pages/Game/game-page.scss';
+@import '../Components/DrawZone/draw-zone.scss';

@@ -1,0 +1,38 @@
+.button_custom {
+	--button-color: rgb(255, 255, 255);
+
+	position: relative;
+	width: fit-content;
+}
+.button_custom button {
+	position: relative;
+	background-color: var(--button-color);
+	border: 1px solid black;
+	transform: translateY(var(--y-offset)) translateX(var(--x-offset));
+	transition: transform 200ms ease-in-out;
+	cursor: pointer;
+}
+.button_custom button:active {
+	transform: translateY(-3px) translateX(3px);
+	background-color: var(--button-color);
+}
+.button_custom_back {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+
+	width: fit-content;
+
+	transform: translate(50%, -50%);
+	border: 1px solid rgb(0, 0, 0);
+	color: transparent;
+
+	cursor: default;
+	user-select: none;
+
+	background: rgb(220, 220, 220);
+	z-index: -999;
+}
+.button_custom_back > * {
+	opacity: 0;
+}

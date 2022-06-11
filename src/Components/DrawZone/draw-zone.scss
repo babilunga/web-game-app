@@ -1,0 +1,108 @@
+@import '../../styles/variables.scss';
+
+.draw-zone {
+	height: 100%;
+}
+.panel {
+	display: flex;
+	gap: 1rem;
+	padding-block: 1rem;
+}
+.controls {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	grid-gap: $gap-size;
+	& > * {
+		width: $cells-size;
+		height: $cells-size;
+		padding: 0;
+		font-size: 2rem;
+		border-radius: $cells-radius;
+		border: none;
+		transition: all $medium-time ease;
+		box-shadow: 0 0 0 3px white, 0 0 0 6px black;
+	}
+	& button {
+		background-color: hsl(0, 0%, 100%);
+		transform: scale(1);
+		cursor: pointer;
+	}
+}
+.brush_state {
+	position: relative;
+	border-radius: $cells-radius;
+	width: $cells-size;
+	height: $cells-size;
+	transition: all 0.3s ease;
+	z-index: 1;
+}
+.palette-color {
+	width: $cells-size;
+	height: $cells-size;
+	border-radius: $cells-radius;
+	transition: transform $slow-time ease-in-out;
+	cursor: pointer;
+	&:hover {
+		transition: transform $fast-time ease-in-out;
+		transform: scale(1.05);
+	}
+	&:active {
+		transform: scale(0.95);
+	}
+}
+.thickness-panel {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	grid-gap: $gap-size;
+	& > * {
+		display: grid;
+		place-items: center;
+		width: $cells-size;
+		height: $cells-size;
+		padding: 0;
+		border-radius: 50%;
+		border: none;
+		transition: all $medium-time ease;
+		box-shadow: 0 0 0 3px white, 0 0 0 6px black;
+	}
+	& > div label {
+		width: 5px;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		background-color: black;
+		cursor: pointer;
+	}
+	& > div:nth-child(2) label {
+		width: 10px;
+	}
+	& > div:nth-child(3) label {
+		width: 15px;
+	}
+	& > div:nth-child(4) label {
+		width: 20px;
+	}
+	& > div:nth-child(5) label {
+		width: 30px;
+	}
+	& input {
+		display: none;
+	}
+}
+
+.canvas-wrap {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80%;
+	margin: 0 auto;
+	& canvas {
+		background-color: #fff;
+		outline: 1px solid black;
+		cursor: crosshair;
+	}
+}

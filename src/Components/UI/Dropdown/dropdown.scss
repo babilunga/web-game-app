@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+
+.dropdown {
+	&-menu {
+		display: none;
+		position: absolute;
+		inset: calc(100% + 1rem) 0 0 0;
+		grid-template-columns: repeat(var(--dropdown-columns, 4), 1fr);
+		grid-auto-columns: 1fr;
+		// grid-template-columns: repeat(6, 1fr);
+		grid-gap: $gap-size;
+
+		background-color: white;
+		width: fit-content;
+		height: fit-content;
+		padding: 1rem;
+		border-radius: $cells-radius;
+		box-shadow: 0 0 0 3px white, 0 0 0 6px black;
+	}
+	z-index: 999;
+}
+.dropdown-menu[data-opened='true'] {
+	animation: fade-in $medium-time forwards;
+}
+.dropdown-menu[data-opened='false'] {
+	animation: fade-out $medium-time forwards;
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

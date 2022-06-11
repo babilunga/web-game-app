@@ -2,17 +2,68 @@
 	font-family: 'Radio Canada';
 	src: url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;600&display=swap');
 }
-/* css normalize */
-html {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
+	font-family: Consolas, 'Courier New', monospace;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+button {
+	background-color: transparent;
+	color: inherit;
+	border-width: 0;
+	padding: 0;
+	cursor: pointer;
+}
+figure {
+	margin: 0;
+}
+ul,
+ol,
+dd {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+p {
+	margin: 0;
+}
+cite {
+	font-style: normal;
+}
+fieldset {
+	border-width: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* 
+html {
+	font-size: 100%;
+	vertical-align: baseline;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
-	/* font-family: 'Radio Canada', sans-serif; */
+	box-sizing: border-box;
 	font-family: Consolas, 'Courier New', monospace;
 	font-weight: normal;
+	font-size: 1rem;
 }
 body {
 	margin: 0;
@@ -22,18 +73,14 @@ body {
 	font-size: 1.6rem;
 }
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* css reset */
 html,
 body,
 div,
 span,
 applet,
-object,
-iframe,
 h1,
 h2,
 h3,
@@ -90,19 +137,15 @@ th,
 td,
 article,
 aside,
-canvas,
 details,
 embed,
 figure,
 figcaption,
-footer,
-header,
 hgroup,
 menu,
 nav,
 output,
 ruby,
-section,
 summary,
 time,
 mark,
@@ -110,11 +153,7 @@ audio,
 video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -131,5 +170,4 @@ section {
 ol,
 ul {
 	list-style: none;
-}
-/* css reset end */
+} */

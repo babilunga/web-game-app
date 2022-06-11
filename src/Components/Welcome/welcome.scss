@@ -1,0 +1,53 @@
+.welcome_wrap {
+	display: grid;
+}
+.welcome_section {
+	justify-items: flex-end;
+	padding: 40px;
+	font-size: 3em;
+	cursor: default;
+	display: grid;
+}
+.welcome_word {
+	align-self: flex-end;
+	gap: 1rem;
+	& span {
+		font-weight: bold;
+		transition: transform 0.5s ease, filter 0.5s ease;
+		font-size: 3rem;
+	}
+}
+.welcome_title {
+	align-self: flex-start;
+	& span {
+		font-size: 3rem;
+		font-weight: bold;
+		text-align: end;
+	}
+}
+.quote_section {
+	align-self: flex-end;
+	min-height: 10rem;
+	.quote_text {
+		font-size: 1.35rem;
+		margin-bottom: 1em;
+		cursor: default;
+	}
+	.quote_author {
+		text-align: right;
+		font-size: 0.9rem;
+		cursor: default;
+	}
+}
+.title_reset {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.secret {
+	cursor: pointer;
+	transform: scale(1);
+	&:hover {
+		transform: scale(1.1);
+		filter: brightness(1.5);
+	}
+}

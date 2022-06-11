@@ -1,34 +1,33 @@
-// import { initializeApp } from 'firebase/app';
-// import { getAuth } from 'firebase/auth';
-// import 'firebase/firestore';
-import './styles/main.css';
+/* eslint-disable react-hooks/exhaustive-deps */
+import './styles/main.scss';
+import React, { useState, useEffect } from 'react';
 
-// import { useAuthState } from 'react-firebase-hooks/auth';
+import HomePage from './Pages/Home/HomePage';
+import GamePage from './Pages/Game/GamePage';
 
-// import Signin from './Components/Signin/Signin';
-// import ChatRoom from './Components/ChatRoom';
-// import Signout from './Components/Signout/Signout';
-import React from 'react';
-import Welcome from './Components/Welcome/Welcome';
+import { getStorageUserName, getStorageLobbyId } from './helpers/storageUtils';
 
-// const firebaseApp = initializeApp({
-// 	apiKey: 'AIzaSyAdOD3eutFmJI9e_2Td7D0a6cVm9Njk_G8',
-// 	authDomain: 'super-chat-2d30e.firebaseapp.com',
-// 	projectId: 'super-chat-2d30e',
-// 	storageBucket: 'super-chat-2d30e.appspot.com',
-// 	messagingSenderId: '859848076796',
-// 	appId: '1:859848076796:web:fddf4fefc8c30dbace5679',
-// });
-
-// const auth = getAuth(firebaseApp);
+export const RootContext = React.createContext();
 
 function App() {
-	// const [user] = useAuthState(auth);
+	const [nickname, setNickname] = useState(null);
+	const [lobbyId, setLobbyId] = useState(null);
+
+	useEffect(() => {
+		const name = getStorageUserName();
+		if (name) setNickname(name);
+
+		const id = getStorageLobbyId();
+		if (id) setLobbyId(id);
+	}, []);
 
 	return (
-		<div className='app'>
-			<Welcome />
-		</div>
+		<RootContext.Provider value={{ nickname, lobbyId }}>
+			<div className='app'>
+				<HomePage />
+				<GamePage />
+			</div>
+		</RootContext.Provider>
 	);
 }
 

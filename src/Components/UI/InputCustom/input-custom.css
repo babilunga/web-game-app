@@ -1,0 +1,74 @@
+.custom_input {
+	position: relative;
+	height: 55px;
+	cursor: text;
+}
+.custom_input::before {
+	content: '\276F';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	font-size: 28px;
+	transform: translateY(calc(-50% + 10px)) translateX(0);
+	transition: transform 0.2s ease;
+}
+.custom_input p {
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	color: rgb(158, 158, 158);
+	cursor: default;
+}
+#custom_input_focus::before {
+	transform: translateY(calc(-50% + 10px)) translateX(-20px);
+}
+#custom_input_caret {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 3px;
+	width: 10px;
+	height: 25px;
+	background-color: transparent;
+	border: 1px solid rgb(0, 0, 0);
+	animation: caretBlink 1s ease infinite;
+}
+.custom_input_field {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	font-size: 22px;
+	border: none;
+	padding: 4px 10px;
+	outline: none;
+	/* background-color: transparent; */
+	background-color: rgb(244, 244, 244);
+	caret-color: transparent;
+	text-align: left;
+	line-height: 1.5;
+	cursor: text;
+}
+@keyframes caretBlink {
+	0% {
+		opacity: 1;
+	}
+	49% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#custom_input_paste_btn {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(calc(-50% + 11px));
+	z-index: 1;
+}
